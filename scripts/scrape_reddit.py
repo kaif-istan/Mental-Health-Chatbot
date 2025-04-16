@@ -1,8 +1,13 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+
+from config.env_loader import load_env
 import praw
 import json
 from datetime import datetime
-import os
-from config.env_loader import load_env
+
 
 # Load environment variables
 env = load_env()
@@ -20,8 +25,10 @@ limit_per_sub = 100
 data = []
 
 # Create output path if it doesn't exist
-output_dir = "mental_health_dataset/raw_data/reddit"
+output_dir = os.path.join(os.path.dirname(__file__), "..", "raw_data", "reddit")
+output_dir = os.path.abspath(output_dir)
 os.makedirs(output_dir, exist_ok=True)
+
 
 # Scrape top posts
 for sub in subreddits:
