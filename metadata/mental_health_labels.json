@@ -1,0 +1,12 @@
+{
+    "Depression": 0,
+    "Anxiety": 1,
+    "Stress": 2,
+    "FOMO": 3,
+    "Loneliness": 4,
+    "Imposter Syndrome": 5,
+    "Burnout": 6,
+    "Social Withdrawal": 7,
+    "Self-esteem Issues": 8
+  }
+  
